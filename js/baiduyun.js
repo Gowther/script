@@ -8,5 +8,7 @@
 // @grant        none
 // ==/Quantumult X==
 
-$task.request.headers['User-Agent'] = 'pan.baidu.com';
-$done();
+var modifiedHeaders = $request.headers;
+modifiedHeaders['User-Agent'] = 'pan.baidu.com';
+
+$done({headers : modifiedHeaders});
